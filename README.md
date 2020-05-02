@@ -1,31 +1,19 @@
-# Church of Saint Mary Magdalene
-Simple page for Church of Saint Mary Magdalene
+# Kapucini Brno
+System for intentions
 
 ## Functions
 
-* In-line page edit
-* Simple photogallery
-* Scheduling calendar for acolytes
 * Scheduling calendar for priests
-
-## TODO
-- [ ] login form
-- [ ] update router
-- [ ] suggest names for scheduling
-- [ ] scheduling calendars - help
-- [ ] photogallery - new administration
+* System for intentions
 
 ## Dependencies
 
-* Nette Framework (>= 2.3)
+* Nette Framework (>= 2.4)
 * Nette plugins:
 	* DateInput (Ondrej Vodacek)
-	* MailPanel (Jan Drabek)
-	* VisualPaginator (David Grudl)
+	* MailPanel (nextras)
+	* VisualPaginator (iPub)
 	* nette.ajax.js (Vojtech Dobes)
 * jQuery
 * Twitter Bootstrap
-* FancyBox
-* bxSlider
-* CKEditor
 
