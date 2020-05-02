@@ -1,0 +1,242 @@
+/* print */
+@media print {
+	.page-header {
+		display: none;
+	}
+	#intention td, #priest td {
+		font-size: 160%;
+	}
+	footer {
+		display: none;
+	}
+    .noprint {
+        display: none;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+h2, .h2 {
+	font-size: 20px;
+}
+h3, .h3 {
+	font-size: 18px;
+}
+h4, .h4 {
+	font-size: 16px;
+}
+.page-header {
+/*	height: 250px;
+	background: url('../images/MMagdalena DSCF2408sm.jpg') no-repeat center center / cover transparent;
+	background-size: auto;
+	background-color: #f8f8f8;*/
+	border-radius: 10px 10px 0 0;
+	margin: 20px 0 0 0;
+}
+.page-header h1 {
+	padding: 10px 30px 20px;
+	background: -moz-linear-gradient(top, rgba(255,255,255,.7) 0%, rgba(255,255,255,.6) 75%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.7)), color-stop(75%,rgba(255,255,255,.6)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,.7) 0%,rgba(255,255,255,.6) 75%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,.7) 0%,rgba(255,255,255,.6) 75%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,.7) 0%,rgba(255,255,255,.6) 75%,rgba(255,255,255,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,.7) 0%,rgba(255,255,255,.6) 75%,rgba(255,255,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+.page-header a {
+	color: black;
+}
+.navbar {
+	border-top: 0;
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+}
+.calendar {
+	text-align: center;
+}
+#priest td, #priest th, #acolyte td, #acolyte th {
+	width: 25%;
+}
+#intention th:first-of-type {
+	width: 150px;
+}
+#intention td:first-of-type {
+	width: 150px;
+	text-align: right;
+    white-space: nowrap;
+}
+/* calendar form*/
+.ui-datepicker td, .ui-datepicker th {
+	width: auto;
+}
+div .calendar {
+	padding-bottom: 5px;
+}
+div .calendar input {
+	width: 165px;
+	margin: 0 auto;
+}
+input.hasDatepicker {
+	background: #fff url(images/calendar.png) 100% 50% no-repeat;
+}
+.actions {
+	white-space: nowrap;
+}
+/* login form */
+.modal-dialog {
+	max-width: 350px;
+}
+.form-signin {
+	max-width: 250px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin .checkbox {
+	font-weight: normal;
+}
+.form-signin .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+}
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+.form-signin input[type="text"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+/* slider */
+.bx-viewport {
+	box-shadow: none !important;
+	border: 0 !important;
+}
+.bx-wrapper .bx-controls-direction a {
+	z-index: 99;
+}
+/* fancybox */
+.fancybox-overlay {
+	background: url("fancybox_overlay.png") repeat scroll 0% 0%;
+	z-index: 999;
+}
+.pagination-centered { text-align:center; }
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 60px;
+}
+a[href]:after {
+    content:'';
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 45px;
+	padding-top: 10px;
+	background-color: #f5f5f5;
+}
+
+/* Images upload */
+#dropbox{
+	border: 1px solid gray;
+	border-radius: 3px;
+	position: relative;
+	margin: 15px auto 15px;
+	min-height: 290px;
+	overflow: hidden;
+	padding-bottom: 40px;
+	width: 90%;
+}
+#dropbox .message{
+	text-align: center;
+	padding-top:125px;
+	display: block;
+}
+#dropbox .message i{
+	color:#ccc;
+}
+#dropbox:before{
+	border-radius:3px 3px 0 0;
+}
+#dropbox .preview{
+	width: 245px;
+	height: 215px;
+	float: left;
+	margin: 55px 0 0 60px;
+	position: relative;
+	text-align: center;
+}
+#dropbox .preview img{
+	max-width: 240px;
+	max-height: 180px;
+	border: 3px solid #fff;
+	display: block;
+	box-shadow: 0 0 2px #000;
+	-webkit-box-shadow: 0 0 2px #000;
+	-moz-box-shadow: 0 0 2px #000;
+}
+#dropbox .imageHolder{
+	display: inline-block;
+	position: relative;
+}
+#dropbox .uploaded{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: url('./html5.upload/done.png') no-repeat center center rgba(255,255,255,0.4);
+}
+#dropbox .preview.done .uploaded{
+	display: block;
+}
+#dropbox .progressHolder{
+	position: absolute;
+	background-color: #252f38;
+	height: 12px;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	box-shadow: 0 0 2px #000;
+	-webkit-box-shadow: 0 0 2px #000;
+	-moz-box-shadow: 0 0 2px #000;
+}
+#dropbox .progress{
+	border-radius: 0;
+	background-color: #2586d0;
+	position: absolute;
+	height: 100%;
+	left: 0;
+	width: 0;
+	box-shadow: 0 0 1px rgba(255, 255, 255, 0.4) inset;
+	-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.4) inset;
+	-moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.4) inset;
+	-moz-transition:0.25s;
+	-webkit-transition:0.25s;
+	-o-transition:0.25s;
+	transition:0.25s;
+}
+#dropbox .preview.done .progress{
+	width: 100% !important;
+}

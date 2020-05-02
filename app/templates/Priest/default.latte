@@ -1,0 +1,38 @@
+{var $title = 'Celebranti'}
+
+{block content}
+
+<h2>Rozpis celebrantů na <strong>{$date|czechDate:"monthY"}</strong></h2>
+<div class="box">
+{control navigation}
+{if $user->isAllowed('Priest','edit')}
+<p><input type="text" class="form-control" id="priestName" placeholder="Jméno celebranta"></p>
+<p>{$text}</p>
+{/if}
+{snippet priest}
+{if $user->isAllowed('Priest','edit')}
+{var $html = "<i class='glyphicon glyphicon-hand-right text-success'></i> "}
+{else}
+{var $html = ""}
+{/if}
+<table id="priest" class="table table-bordered table-condensed table-striped">
+	<tr>
+		<th>datum</th>
+		<th>10.00</th>
+		<th>17.00</th>
+	</tr>
+	{if count($items) > 0}
+	{foreach $items as $item}
+	<tr {if $user->isAllowed('Priest','edit')}data-date="{$item[date]}" {/if}n:class="$item[sun] ? info">
+		<td><a n:href="Priest:export, date => $item[date]" n:tag-if="$item[mon] && $item[date] && $user->isAllowed('Intention','edit')">{$item[date]|czechDate:"abbr"|firstUpper}</a></td>
+		<td {if $item[sun]===true && $user->isAllowed('Priest','edit')}class="ms" data-time="10:00" data-id="{$item[id1]}" data-confirm="Opravdu editovat uloženou hodnotu?"{/if}>{if $item[sun]}{$html|noescape}{/if}{$item[names1]}</td>
+		<td {if $user->isAllowed('Priest','edit')}class="ms" data-time="17:00" data-id="{$item[id2]}" data-confirm="Opravdu editovat uloženou hodnotu?"{/if}>{$html|noescape}{$item[names2]}</td>
+	</tr>
+	{/foreach}
+	{/if}
+</table>
+{/snippet}
+</div>
+
+{/block}
+

@@ -1,0 +1,13 @@
+/app/config/*.neon
+/log/*
+/temp/*
+/vendor/*
+/www/css/*
+!/www/css/style.css
+/www/fonts/*
+/www/images/*
+/www/images/thumbs/*
+/www/js/*
+!/www/js/main.js
+!/www/js/main.user.js
+!.htaccess

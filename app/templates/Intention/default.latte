@@ -1,0 +1,38 @@
+{var $title = 'Intence'}
+
+{block content}
+
+<h2>Rozpis intencí na <strong>{$date|czechDate:"monthY"}</strong></h2>
+<div class="box">
+<div class="noprint">
+{control navigation}
+{if $user->isAllowed('Intention','add')}
+	<p><div class="col-md-8"><input type="text" class="form-control" id="intention" placeholder="Intence"></div><div class="col-md-2"><input type="text" class="form-control" id="amount" placeholder="Částka v Kč" autocomplete="off"></div><div class="col-md-2"><input type="password" class="form-control col-md-2" id="code" placeholder="Heslo" autocomplete="off"></div></p>
+{/if}
+</div>
+{snippet intention}
+<p class="noprint">
+	<a n:href="Intention:statement, date => $date" n:tag-if="$user->isAllowed('Intention','statement')">měsíční výkaz</a> &bull;
+	<a n:href="Intention:code" n:tag-if="$user->isAllowed('Intention','code')">kontrolní kódy</a> &bull;
+	<a n:href="Intention:protocol" n:tag-if="$user->isAllowed('Intention','protocol')">protokol</a> &bull;
+    <a n:href="Intention:cache" n:tag-if="$user->isAllowed('Intention','statement')">pokladna</a>
+</p>
+<table id="intention" class="table table-bordered table-condensed table-striped">
+	<tr>
+		<th>datum</th>
+		<th>intence</th>
+	</tr>
+	{if count($items) > 0}
+	{foreach $items as $item}
+	<tr {if $user->isAllowed('Intention','add')}data-date="{$item[date]}" {/if}n:class="$item[sun] ? info">
+		<td><a n:href="Intention:export, date => $item[date]" n:tag-if="$item[mon] && $item[date] && $user->isAllowed('Intention','export')"><strong>{$item[date]|czechDate:"abbr"|firstUpper}</strong> {$item[date].' '.$item[time]|extraordinary}</a></td>
+		<td {if $user->isAllowed('Intention','add') && !$item[intention]}class="ms" data-time="{$item[time]}" data-id="{$item[id]}"{/if}>{if $user->isAllowed('Intention','add') && !$item[intention]}<i class="glyphicon glyphicon-hand-right text-success noprint"></i> {/if}{$item[intention]}</td>
+	</tr>
+	{/foreach}
+	{/if}
+</table>
+{/snippet}
+</div>
+
+{/block}
+

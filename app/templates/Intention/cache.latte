@@ -1,0 +1,19 @@
+{var $title = 'Intence'}
+
+{block content}
+
+<h2>Aktuální pokladna</h2>
+<p>Stav pokladny k 1. {php echo date('n. Y');}</p>
+<div class="box">
+{snippet intention}
+<table id="intention" class="table table-bordered table-condensed">
+	<tr>
+		<td>Celková částka</td>
+		<td>{$cacheSum|currency}</td>
+	</tr>
+</table>
+{/snippet}
+</div>
+
+{/block}
+

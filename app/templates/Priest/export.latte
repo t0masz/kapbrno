@@ -1,0 +1,28 @@
+{var $title = 'Celebranti'}
+
+{block content}
+
+<h2>Rozpis celebrantů na týden od <strong>{$date|czechDate}</strong></h2>
+<div class="box">
+{snippet priest}
+<table id="priest" class="table table-bordered table-condensed">
+	<tr>
+		<th>datum</th>
+		<th>10.00</th>
+		<th>17.00</th>
+	</tr>
+	{if count($items) > 0}
+	{foreach $items as $item}
+	<tr n:class="$item[sun] ? info">
+		<td>{$item[date]|czechDate:"abbr"|firstUpper}</td>
+		<td>{$item[names1]}</td>
+		<td>{$item[names2]}</td>
+	</tr>
+	{/foreach}
+	{/if}
+</table>
+{/snippet}
+</div>
+
+{/block}
+
