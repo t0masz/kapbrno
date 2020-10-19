@@ -75,16 +75,16 @@
         },
         {
             "name": "latte/latte",
-            "version": "v2.8.0",
+            "version": "v2.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/latte.git",
-                "reference": "4cd61a413ac6dadf918281f4626f19b6f99c7978"
+                "reference": "a3fbffc89f85b2745bc058278c882f745b6ad89b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/latte/zipball/4cd61a413ac6dadf918281f4626f19b6f99c7978",
-                "reference": "4cd61a413ac6dadf918281f4626f19b6f99c7978",
+                "url": "https://api.github.com/repos/nette/latte/zipball/a3fbffc89f85b2745bc058278c882f745b6ad89b",
+                "reference": "a3fbffc89f85b2745bc058278c882f745b6ad89b",
                 "shasum": ""
             },
             "require": {
@@ -148,20 +148,20 @@
                 "template",
                 "twig"
             ],
-            "time": "2020-04-20T21:18:50+00:00"
+            "time": "2020-09-29T13:32:37+00:00"
         },
         {
             "name": "nette/application",
-            "version": "v2.4.14",
+            "version": "v2.4.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/application.git",
-                "reference": "86a28664ca5594a6f97db889fd480cf4cf737218"
+                "reference": "e32c04de211873c792d13d9a00c50083b8e05a23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/application/zipball/86a28664ca5594a6f97db889fd480cf4cf737218",
-                "reference": "86a28664ca5594a6f97db889fd480cf4cf737218",
+                "url": "https://api.github.com/repos/nette/application/zipball/e32c04de211873c792d13d9a00c50083b8e05a23",
+                "reference": "e32c04de211873c792d13d9a00c50083b8e05a23",
                 "shasum": ""
             },
             "require": {
@@ -200,9 +200,6 @@
             "autoload": {
                 "classmap": [
                     "src/"
-                ],
-                "files": [
-                    "src/compatibility.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -235,7 +232,7 @@
                 "routing",
                 "seo"
             ],
-            "time": "2019-11-19T18:47:13+00:00"
+            "time": "2020-08-25T01:51:49+00:00"
         },
         {
             "name": "nette/bootstrap",
@@ -445,16 +442,16 @@
         },
         {
             "name": "nette/database",
-            "version": "v2.4.9",
+            "version": "v2.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/database.git",
-                "reference": "ac4fe411062798529194ff6a3808768abc57964f"
+                "reference": "0ead09615f06d1ca77ae28d1eba0fe153d590ee0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/database/zipball/ac4fe411062798529194ff6a3808768abc57964f",
-                "reference": "ac4fe411062798529194ff6a3808768abc57964f",
+                "url": "https://api.github.com/repos/nette/database/zipball/0ead09615f06d1ca77ae28d1eba0fe153d590ee0",
+                "reference": "0ead09615f06d1ca77ae28d1eba0fe153d590ee0",
                 "shasum": ""
             },
             "require": {
@@ -513,7 +510,7 @@
                 "queries",
                 "sqlite"
             ],
-            "time": "2019-11-19T18:29:14+00:00"
+            "time": "2020-03-19T14:46:46+00:00"
         },
         {
             "name": "nette/di",
@@ -918,16 +915,16 @@
         },
         {
             "name": "nette/php-generator",
-            "version": "v3.3.4",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/php-generator.git",
-                "reference": "8fe7e699dca7db186f56d75800cb1ec32e39c856"
+                "reference": "7051954c534cebafd650efe8b145ac75b223cb66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/php-generator/zipball/8fe7e699dca7db186f56d75800cb1ec32e39c856",
-                "reference": "8fe7e699dca7db186f56d75800cb1ec32e39c856",
+                "url": "https://api.github.com/repos/nette/php-generator/zipball/7051954c534cebafd650efe8b145ac75b223cb66",
+                "reference": "7051954c534cebafd650efe8b145ac75b223cb66",
                 "shasum": ""
             },
             "require": {
@@ -936,13 +933,17 @@
             },
             "require-dev": {
                 "nette/tester": "^2.0",
+                "nikic/php-parser": "^4.4",
                 "phpstan/phpstan": "^0.12",
                 "tracy/tracy": "^2.3"
+            },
+            "suggest": {
+                "nikic/php-parser": "to use ClassType::withBodiesFrom() & GlobalFunction::withBodyFrom()"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -974,7 +975,7 @@
                 "php",
                 "scaffolding"
             ],
-            "time": "2020-02-09T14:39:09+00:00"
+            "time": "2020-06-19T14:31:47+00:00"
         },
         {
             "name": "nette/reflection",
@@ -1375,16 +1376,16 @@
         },
         {
             "name": "tracy/tracy",
-            "version": "v2.6.7",
+            "version": "v2.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "b6ed87129ec549b7bb2974684eec6f76efc3bdf1"
+                "reference": "d3bb9f43692df5e3b83ab8004d3e6208034ac0ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/b6ed87129ec549b7bb2974684eec6f76efc3bdf1",
-                "reference": "b6ed87129ec549b7bb2974684eec6f76efc3bdf1",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/d3bb9f43692df5e3b83ab8004d3e6208034ac0ca",
+                "reference": "d3bb9f43692df5e3b83ab8004d3e6208034ac0ca",
                 "shasum": ""
             },
             "require": {
@@ -1438,7 +1439,7 @@
                 "nette",
                 "profiler"
             ],
-            "time": "2020-04-11T17:47:21+00:00"
+            "time": "2020-05-17T09:37:45+00:00"
         },
         {
             "name": "voda/date-input",
