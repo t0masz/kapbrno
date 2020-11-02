@@ -46,7 +46,7 @@ class Authenticator implements Nette\Security\IAuthenticator
 			throw new AuthenticationException('The password is incorrect.', self::INVALID_CREDENTIAL);
 		} elseif ($this->passwords->needsRehash($row[self::COLUMN_PASSWORD_HASH])) {
 			$row->update([
-				self::COLUMN_PASSWORD_HASH => Passwords::hash($password),
+				self::COLUMN_PASSWORD_HASH => $this->passwords->hash($password),
 			]);
 		}
 		$arr = $row->toArray();
